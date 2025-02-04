@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://clrn2x2bvhnha"]
+
+[ext_resource type="Texture2D" uid="uid://cvjwhcfit0fb1" path="res://Cute_Fantasy_Free/Cute_Fantasy_Free/Outdoor decoration/House.png" id="1_bmoik"]
+[ext_resource type="Texture2D" uid="uid://c5r80k43ldk8v" path="res://Cute_Fantasy_Free/Cute_Fantasy_Free/Outdoor decoration/Oak_Tree.png" id="2_ghj3n"]
+
+[node name="Town_Scene" type="Node2D"]
+
+[node name="Tavern" type="Button" parent="."]
+offset_left = 53.0
+offset_top = 642.0
+offset_right = 141.0
+offset_bottom = 769.0
+icon = ExtResource("1_bmoik")
+
+[node name="Blacksmith" type="Button" parent="."]
+offset_left = 333.0
+offset_top = 404.0
+offset_right = 421.0
+offset_bottom = 524.0
+icon = ExtResource("1_bmoik")
+
+[node name="Dungeon" type="Button" parent="."]
+offset_left = 77.0
+offset_top = 119.0
+offset_right = 149.0
+offset_bottom = 207.0
+icon = ExtResource("2_ghj3n")

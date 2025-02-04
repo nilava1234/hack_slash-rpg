@@ -1,0 +1,47 @@
+[gd_scene load_steps=4 format=3 uid="uid://b1rlc0ujujxgf"]
+
+[ext_resource type="Texture2D" uid="uid://ctxvmbc430sp0" path="res://icon.svg" id="1_jrihs"]
+[ext_resource type="Script" path="res://button.gd" id="2_261kt"]
+[ext_resource type="Script" path="res://quit_button.gd" id="3_wvvbf"]
+
+[node name="main_menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(242, 435)
+scale = Vector2(4.6875, 7.95313)
+texture = ExtResource("1_jrihs")
+
+[node name="play_button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 709.0
+offset_right = 254.0
+offset_bottom = 762.0
+text = "Play"
+script = ExtResource("2_261kt")
+
+[node name="quit_button" type="Button" parent="."]
+offset_left = 20.0
+offset_top = 781.0
+offset_right = 192.0
+offset_bottom = 826.0
+text = "Quit"
+script = ExtResource("3_wvvbf")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 130.0
+offset_top = 287.0
+offset_right = 331.0
+offset_bottom = 318.0
+text = "Da Game 💀💀💀💀💀"
+tab_size = 10
+
+[connection signal="pressed" from="play_button" to="play_button" method="_on_pressed"]
+[connection signal="pressed" from="quit_button" to="quit_button" method="_on_pressed"]
