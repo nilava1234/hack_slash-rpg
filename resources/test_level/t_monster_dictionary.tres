@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="MonsterList" load_steps=5 format=3 uid="uid://bqjfrypcd2fuf"]
+
+[ext_resource type="Script" path="res://scripts/MonsterData.gd" id="1_chs7b"]
+[ext_resource type="Script" path="res://scripts/MonsterList.gd" id="2_l1iya"]
+[ext_resource type="Resource" uid="uid://c33qfa0qmp5l7" path="res://resources/test_level/t_monster1.tres" id="2_mytgk"]
+[ext_resource type="Resource" uid="uid://b1fx37ow7dv74" path="res://resources/test_level/t_monster2.tres" id="3_sqb0l"]
+
+[resource]
+script = ExtResource("2_l1iya")
+monsters = Array[ExtResource("1_chs7b")]([ExtResource("2_mytgk"), ExtResource("3_sqb0l")])

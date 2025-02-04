@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://b1rlc0ujujxgf"]
 
 [ext_resource type="Texture2D" uid="uid://ctxvmbc430sp0" path="res://icon.svg" id="1_jrihs"]
-[ext_resource type="Script" path="res://button.gd" id="2_261kt"]
-[ext_resource type="Script" path="res://quit_button.gd" id="3_wvvbf"]
+[ext_resource type="Script" path="res://scripts/main_menu_scripts/play_button.gd" id="2_261kt"]
+[ext_resource type="Script" path="res://scripts/main_menu_scripts/quit_button.gd" id="3_wvvbf"]
 
 [node name="main_menu" type="Control"]
 layout_mode = 3
@@ -27,6 +27,7 @@ text = "Play"
 script = ExtResource("2_261kt")
 
 [node name="quit_button" type="Button" parent="."]
+layout_mode = 0
 offset_left = 20.0
 offset_top = 781.0
 offset_right = 192.0

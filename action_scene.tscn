@@ -1,0 +1,52 @@
+[gd_scene load_steps=5 format=3 uid="uid://jho02u5bn5do"]
+
+[ext_resource type="Script" path="res://scripts/action_scene_scripts/action_scene.gd" id="1_w1ksc"]
+[ext_resource type="Texture2D" uid="uid://cmhjnoffbxag0" path="res://hm_sprites/stone_dungeon_bg.png" id="2_n47tr"]
+[ext_resource type="Script" path="res://scripts/action_scene_scripts/enemy.gd" id="3_2x6v2"]
+[ext_resource type="Resource" uid="uid://bqjfrypcd2fuf" path="res://resources/test_level/t_monster_dictionary.tres" id="4_granh"]
+
+[node name="action_scene" type="Node2D" node_paths=PackedStringArray("player_health_bar")]
+script = ExtResource("1_w1ksc")
+player_health_bar = NodePath("UI/f_healthbar")
+
+[node name="background" type="Node2D" parent="."]
+
+[node name="StoneDungeonBg" type="Sprite2D" parent="background"]
+position = Vector2(241, 422)
+scale = Vector2(0.673611, 0.673611)
+texture = ExtResource("2_n47tr")
+
+[node name="enemy" type="Node2D" parent="." node_paths=PackedStringArray("enemy_health_bar", "enemy_sprite")]
+script = ExtResource("3_2x6v2")
+enemy_health_bar = NodePath("../UI/e_healthbar")
+enemy_dictionary = ExtResource("4_granh")
+enemy_sprite = NodePath("enemy_sprite")
+
+[node name="enemy_sprite" type="Sprite2D" parent="enemy"]
+position = Vector2(250, 536)
+scale = Vector2(4.81641, 4.81641)
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="f_healthbar" type="ProgressBar" parent="UI"]
+layout_mode = 0
+offset_left = 62.0
+offset_top = 783.0
+offset_right = 234.0
+offset_bottom = 830.0
+value = 90.0
+fill_mode = 1
+
+[node name="e_healthbar" type="ProgressBar" parent="UI"]
+layout_mode = 0
+offset_left = 258.0
+offset_top = 784.0
+offset_right = 430.0
+offset_bottom = 831.0
+value = 80.0
+
+[connection signal="ready" from="." to="." method="_on_ready"]

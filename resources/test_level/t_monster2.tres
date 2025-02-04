@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="MonsterData" load_steps=3 format=3 uid="uid://b1fx37ow7dv74"]
+
+[ext_resource type="Script" path="res://scripts/MonsterData.gd" id="1_ssw1w"]
+[ext_resource type="Texture2D" uid="uid://b54qlewikejph" path="res://sprite/300 Characters Free! 128x128/V1.0/1.png" id="2_iafni"]
+
+[resource]
+script = ExtResource("1_ssw1w")
+name = "dragon"
+sprite = ExtResource("2_iafni")
+dmg = 10
+attack_speed = 1.0
+health = 100
+armor = 0
+tenacity = 0
