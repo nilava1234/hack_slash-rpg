@@ -1,17 +1,17 @@
-[gd_scene load_steps=5 format=3 uid="uid://jho02u5bn5do"]
+[gd_scene load_steps=4 format=3 uid="uid://jho02u5bn5do"]
 
 [ext_resource type="Script" path="res://scripts/action_scene_scripts/action_scene.gd" id="1_w1ksc"]
 [ext_resource type="Texture2D" uid="uid://cmhjnoffbxag0" path="res://hm_sprites/stone_dungeon_bg.png" id="2_n47tr"]
 [ext_resource type="Script" path="res://scripts/action_scene_scripts/enemy.gd" id="3_2x6v2"]
-[ext_resource type="Resource" uid="uid://bqjfrypcd2fuf" path="res://resources/test_level/t_monster_dictionary.tres" id="4_granh"]
 
-[node name="action_scene" type="Node2D" node_paths=PackedStringArray("player_health_bar")]
+[node name="action_scene" type="Node2D" node_paths=PackedStringArray("player_health_bar", "background")]
 script = ExtResource("1_w1ksc")
 player_health_bar = NodePath("UI/f_healthbar")
+background = NodePath("background/background")
 
 [node name="background" type="Node2D" parent="."]
 
-[node name="StoneDungeonBg" type="Sprite2D" parent="background"]
+[node name="background" type="Sprite2D" parent="background"]
 position = Vector2(241, 422)
 scale = Vector2(0.673611, 0.673611)
 texture = ExtResource("2_n47tr")
@@ -20,7 +20,6 @@ texture = ExtResource("2_n47tr")
 script = ExtResource("3_2x6v2")
 scene = NodePath("..")
 enemy_health_bar = NodePath("../UI/e_healthbar")
-enemy_dictionary = ExtResource("4_granh")
 enemy_sprite = NodePath("enemy_sprite")
 
 [node name="enemy_sprite" type="Sprite2D" parent="enemy"]

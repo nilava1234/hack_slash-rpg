@@ -1,6 +1,8 @@
 extends Resource
-class_name MonsterList
+class_name DungeonData
 
+@export var name: String
+@export var icon: Texture2D
 @export var background: Texture2D
 @export var monsters: Array[MonsterData] = []
 

@@ -1,32 +1,33 @@
-[gd_scene load_steps=4 format=3 uid="uid://clrn2x2bvhnha"]
+[gd_scene load_steps=3 format=3 uid="uid://clrn2x2bvhnha"]
 
-[ext_resource type="Texture2D" uid="uid://dp3dgjrrljyll" path="res://sprite/Cute_Fantasy_Free/Outdoor decoration/House.png" id="1_5u2xp"]
-[ext_resource type="Texture2D" uid="uid://dlmvtowunre3f" path="res://sprite/Cute_Fantasy_Free/Outdoor decoration/Oak_Tree.png" id="2_a83ot"]
-[ext_resource type="Script" path="res://scripts/dungeon.gd" id="3_kw4es"]
+[ext_resource type="Texture2D" uid="uid://bfevajpj7y6q2" path="res://sprite/hub_background.png" id="1_hl2ah"]
+[ext_resource type="Script" path="res://hub_dungeon_button.gd" id="3_xvnnf"]
 
 [node name="Town_Scene" type="Node2D"]
 
+[node name="HubBackground" type="Sprite2D" parent="."]
+position = Vector2(240.5, 416.222)
+scale = Vector2(0.679167, 0.679167)
+texture = ExtResource("1_hl2ah")
+
 [node name="Tavern" type="Button" parent="."]
-offset_left = 53.0
-offset_top = 642.0
-offset_right = 141.0
-offset_bottom = 769.0
-icon = ExtResource("1_5u2xp")
+offset_left = 49.0
+offset_top = 475.0
+offset_right = 137.0
+offset_bottom = 602.0
 
 [node name="Blacksmith" type="Button" parent="."]
-offset_left = 333.0
-offset_top = 404.0
-offset_right = 421.0
-offset_bottom = 524.0
-icon = ExtResource("1_5u2xp")
+offset_left = 337.0
+offset_top = 298.0
+offset_right = 425.0
+offset_bottom = 418.0
 
 [node name="Dungeon" type="Button" parent="."]
-offset_left = 77.0
-offset_top = 119.0
-offset_right = 149.0
-offset_bottom = 207.0
-icon = ExtResource("2_a83ot")
-script = ExtResource("3_kw4es")
+offset_left = 255.0
+offset_top = 117.0
+offset_right = 327.0
+offset_bottom = 205.0
+script = ExtResource("3_xvnnf")
 
 [node name="Control" type="Control" parent="."]
 visible = false

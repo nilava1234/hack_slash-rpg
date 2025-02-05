@@ -7,7 +7,7 @@
 script = ExtResource("1_ssw1w")
 name = "dragon"
 sprite = ExtResource("2_iafni")
-dmg = 10
+dmg = 8
 attack_speed = 2.0
 health = 100
 armor = 0

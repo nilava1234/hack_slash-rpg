@@ -1,0 +1,174 @@
+[gd_scene load_steps=14 format=3 uid="uid://dmeav3c148wsm"]
+
+[ext_resource type="Texture2D" uid="uid://ctxvmbc430sp0" path="res://sprite/icon.svg" id="1_6piwe"]
+[ext_resource type="Script" path="res://dungeon_menu_maker.gd" id="2_53dry"]
+[ext_resource type="Script" path="res://dungeon_menu_close.gd" id="2_sv4yd"]
+[ext_resource type="Resource" uid="uid://1hnvn5fupbbo" path="res://resources/hub_dungeon_list.tres" id="3_mnr7i"]
+[ext_resource type="Script" path="res://scripts/dungeon_loader.gd" id="4_pmpfc"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_87cjl"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4mxnr"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 0.4)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yjbv0"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 0.75)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a35d5"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.75, 0.75, 0.75, 0.75)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hq0l0"]
+content_margin_left = 0.0
+content_margin_top = 4.0
+content_margin_right = 0.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0p45l"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 0.75)
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rakry"]
+content_margin_left = 4.0
+content_margin_top = 0.0
+content_margin_right = 4.0
+content_margin_bottom = 0.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 6
+
+[sub_resource type="Theme" id="Theme_p40d7"]
+HScrollBar/icons/decrement = SubResource("ImageTexture_87cjl")
+HScrollBar/icons/decrement_highlight = SubResource("ImageTexture_87cjl")
+HScrollBar/icons/decrement_pressed = SubResource("ImageTexture_87cjl")
+HScrollBar/icons/increment = SubResource("ImageTexture_87cjl")
+HScrollBar/icons/increment_highlight = SubResource("ImageTexture_87cjl")
+HScrollBar/icons/increment_pressed = SubResource("ImageTexture_87cjl")
+HScrollBar/styles/grabber = SubResource("StyleBoxFlat_4mxnr")
+HScrollBar/styles/grabber_highlight = SubResource("StyleBoxFlat_yjbv0")
+HScrollBar/styles/grabber_pressed = SubResource("StyleBoxFlat_a35d5")
+HScrollBar/styles/scroll = SubResource("StyleBoxFlat_hq0l0")
+HScrollBar/styles/scroll_focus = SubResource("StyleBoxFlat_0p45l")
+VScrollBar/icons/decrement = SubResource("ImageTexture_87cjl")
+VScrollBar/icons/decrement_highlight = SubResource("ImageTexture_87cjl")
+VScrollBar/icons/decrement_pressed = SubResource("ImageTexture_87cjl")
+VScrollBar/icons/increment = SubResource("ImageTexture_87cjl")
+VScrollBar/icons/increment_highlight = SubResource("ImageTexture_87cjl")
+VScrollBar/icons/increment_pressed = SubResource("ImageTexture_87cjl")
+VScrollBar/styles/grabber = SubResource("StyleBoxFlat_4mxnr")
+VScrollBar/styles/grabber_highlight = SubResource("StyleBoxFlat_yjbv0")
+VScrollBar/styles/grabber_pressed = SubResource("StyleBoxFlat_a35d5")
+VScrollBar/styles/scroll = SubResource("StyleBoxFlat_rakry")
+VScrollBar/styles/scroll_focus = SubResource("StyleBoxFlat_0p45l")
+
+[node name="dungeon_page" type="Node2D"]
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(237, 288)
+scale = Vector2(3.53125, 1.89063)
+texture = ExtResource("1_6piwe")
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="close" type="Button" parent="UI"]
+layout_mode = 0
+offset_left = 408.0
+offset_top = 190.0
+offset_right = 437.0
+offset_bottom = 221.0
+text = "X"
+script = ExtResource("2_sv4yd")
+
+[node name="Label" type="Label" parent="UI"]
+layout_mode = 0
+offset_left = 49.0
+offset_top = 192.0
+offset_right = 131.0
+offset_bottom = 215.0
+text = "Dungeon's"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="UI"]
+layout_mode = 0
+offset_left = 34.0
+offset_top = 236.0
+offset_right = 433.0
+offset_bottom = 386.0
+theme = SubResource("Theme_p40d7")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/ScrollContainer" node_paths=PackedStringArray("template")]
+layout_mode = 2
+script = ExtResource("2_53dry")
+dungeon_list = ExtResource("3_mnr7i")
+template = NodePath("../../../Templates/dungeon_button")
+
+[node name="Templates" type="Node2D" parent="."]
+visible = false
+
+[node name="dungeon_button" type="Button" parent="Templates"]
+offset_right = 8.0
+offset_bottom = 8.0
+script = ExtResource("4_pmpfc")
+
+[node name="dungeon_label" type="Label" parent="Templates/dungeon_button"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[connection signal="pressed" from="UI/close" to="UI/close" method="_on_pressed"]
+[connection signal="ready" from="UI/ScrollContainer/HBoxContainer" to="UI/ScrollContainer/HBoxContainer" method="_on_ready"]

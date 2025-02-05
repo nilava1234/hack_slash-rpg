@@ -2,7 +2,7 @@ extends Node2D
 
 @export var scene: Node2D
 @export var enemy_health_bar: ProgressBar
-@export var enemy_dictionary: Resource
+@export var enemy_dictionary: DungeonData
 @export var enemy_sprite: Sprite2D
 
 # Duration of the shake in seconds.
@@ -21,6 +21,7 @@ var attack_speed := 0
 
 func _ready() -> void:
 	# Seed the random number generator.
+	enemy_dictionary = get_parent().get_dungeon_data()
 	randomize()
 	original_position = position
 	spawn()
