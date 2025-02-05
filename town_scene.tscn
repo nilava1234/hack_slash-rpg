@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dp3dgjrrljyll" path="res://sprite/Cute_Fantasy_Free/Outdoor decoration/House.png" id="1_5u2xp"]
 [ext_resource type="Texture2D" uid="uid://dlmvtowunre3f" path="res://sprite/Cute_Fantasy_Free/Outdoor decoration/Oak_Tree.png" id="2_a83ot"]
-[ext_resource type="Script" path="res://dungeon.gd" id="3_kw4es"]
+[ext_resource type="Script" path="res://scripts/dungeon.gd" id="3_kw4es"]
 
 [node name="Town_Scene" type="Node2D"]
 
@@ -27,5 +27,21 @@ offset_right = 149.0
 offset_bottom = 207.0
 icon = ExtResource("2_a83ot")
 script = ExtResource("3_kw4es")
+
+[node name="Control" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 51.0
+offset_top = 254.0
+offset_right = 440.0
+offset_bottom = 485.0
+
+[node name="ItemList" type="ItemList" parent="Control"]
+layout_mode = 0
+offset_left = -35.0
+offset_top = 25.0
+offset_right = 325.0
+offset_bottom = 238.0
 
 [connection signal="pressed" from="Dungeon" to="Dungeon" method="_on_pressed"]
