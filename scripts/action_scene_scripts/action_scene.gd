@@ -13,3 +13,9 @@ func _on_ready() -> void:
 func _process(delta:float) -> void:
 	if Input.is_action_just_pressed("ui_accept"):
 		get_node("enemy").hit(player_damage)
+
+func damage_player(damage: int) -> void:
+	player_health_bar.value -= damage
+	if player_health_bar.value <= 0:
+		print("Game Over")
+		get_tree().change_scene_to_file("res://town_scene.tscn")

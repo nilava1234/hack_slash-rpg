@@ -7,8 +7,8 @@
 script = ExtResource("1_g04o8")
 name = "skeleton"
 sprite = ExtResource("2_jucus")
-dmg = 1
-attack_speed = 10.0
+dmg = 5
+attack_speed = 2.0
 health = 100
 armor = 0
 tenacity = 0

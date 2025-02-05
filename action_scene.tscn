@@ -16,8 +16,9 @@ position = Vector2(241, 422)
 scale = Vector2(0.673611, 0.673611)
 texture = ExtResource("2_n47tr")
 
-[node name="enemy" type="Node2D" parent="." node_paths=PackedStringArray("enemy_health_bar", "enemy_sprite")]
+[node name="enemy" type="Node2D" parent="." node_paths=PackedStringArray("scene", "enemy_health_bar", "enemy_sprite")]
 script = ExtResource("3_2x6v2")
+scene = NodePath("..")
 enemy_health_bar = NodePath("../UI/e_healthbar")
 enemy_dictionary = ExtResource("4_granh")
 enemy_sprite = NodePath("enemy_sprite")
