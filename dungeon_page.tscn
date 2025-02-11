@@ -1,10 +1,10 @@
 [gd_scene load_steps=14 format=3 uid="uid://dmeav3c148wsm"]
 
 [ext_resource type="Texture2D" uid="uid://ctxvmbc430sp0" path="res://sprite/icon.svg" id="1_6piwe"]
-[ext_resource type="Script" path="res://dungeon_menu_maker.gd" id="2_53dry"]
-[ext_resource type="Script" path="res://dungeon_menu_close.gd" id="2_sv4yd"]
+[ext_resource type="Script" path="res://scripts/town_scene/dungeon_menu_maker.gd" id="2_53dry"]
+[ext_resource type="Script" path="res://scripts/town_scene/dungeon_menu_close.gd" id="2_sv4yd"]
 [ext_resource type="Resource" uid="uid://1hnvn5fupbbo" path="res://resources/hub_dungeon_list.tres" id="3_mnr7i"]
-[ext_resource type="Script" path="res://scripts/dungeon_loader.gd" id="4_pmpfc"]
+[ext_resource type="Script" path="res://scripts/town_scene/dungeon_loader.gd" id="4_pmpfc"]
 
 [sub_resource type="ImageTexture" id="ImageTexture_87cjl"]
 

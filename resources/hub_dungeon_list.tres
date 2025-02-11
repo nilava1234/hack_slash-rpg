@@ -1,9 +1,10 @@
-[gd_resource type="Resource" script_class="DungeonList" load_steps=4 format=3 uid="uid://1hnvn5fupbbo"]
+[gd_resource type="Resource" script_class="DungeonList" load_steps=5 format=3 uid="uid://1hnvn5fupbbo"]
 
-[ext_resource type="Script" path="res://scripts/DungeonData.gd" id="1_paedd"]
+[ext_resource type="Script" path="res://scripts/_Global/resource/DungeonData.gd" id="1_paedd"]
 [ext_resource type="Resource" uid="uid://bqjfrypcd2fuf" path="res://resources/test_level/t_monster_dictionary.tres" id="2_cpp4x"]
-[ext_resource type="Script" path="res://scripts/DungeonList.gd" id="2_sgn28"]
+[ext_resource type="Script" path="res://scripts/_Global/resource/DungeonList.gd" id="2_sgn28"]
+[ext_resource type="Resource" uid="uid://c5ycjh36btin" path="res://resources/test_level/t_hub_invasion.tres" id="3_opjuw"]
 
 [resource]
 script = ExtResource("2_sgn28")
-monster_lists = Array[ExtResource("1_paedd")]([ExtResource("2_cpp4x"), ExtResource("2_cpp4x"), ExtResource("2_cpp4x")])
+monster_lists = Array[ExtResource("1_paedd")]([ExtResource("2_cpp4x"), ExtResource("3_opjuw")])

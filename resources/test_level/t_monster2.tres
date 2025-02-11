@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="MonsterData" load_steps=3 format=3 uid="uid://b1fx37ow7dv74"]
 
-[ext_resource type="Script" path="res://scripts/MonsterData.gd" id="1_ssw1w"]
+[ext_resource type="Script" path="res://scripts/_Global/resource/MonsterData.gd" id="1_ssw1w"]
 [ext_resource type="Texture2D" uid="uid://b54qlewikejph" path="res://sprite/300 Characters Free! 128x128/V1.0/1.png" id="2_iafni"]
 
 [resource]

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="DungeonData" load_steps=6 format=3 uid="uid://c5ycjh36btin"]
+
+[ext_resource type="Script" path="res://scripts/_Global/resource/MonsterData.gd" id="1_i75ty"]
+[ext_resource type="Texture2D" uid="uid://bfevajpj7y6q2" path="res://sprite/hub_background.png" id="1_rn2o1"]
+[ext_resource type="Script" path="res://scripts/_Global/resource/DungeonData.gd" id="2_bqi53"]
+[ext_resource type="Texture2D" uid="uid://ctxvmbc430sp0" path="res://sprite/icon.svg" id="2_ooboo"]
+[ext_resource type="Resource" uid="uid://b1fx37ow7dv74" path="res://resources/test_level/t_monster2.tres" id="4_huk4o"]
+
+[resource]
+script = ExtResource("2_bqi53")
+name = "hub invasion"
+icon = ExtResource("2_ooboo")
+background = ExtResource("1_rn2o1")
+monsters = Array[ExtResource("1_i75ty")]([ExtResource("4_huk4o")])

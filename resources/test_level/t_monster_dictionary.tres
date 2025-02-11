@@ -1,11 +1,11 @@
 [gd_resource type="Resource" script_class="DungeonData" load_steps=7 format=3 uid="uid://bqjfrypcd2fuf"]
 
-[ext_resource type="Script" path="res://scripts/MonsterData.gd" id="1_chs7b"]
+[ext_resource type="Script" path="res://scripts/_Global/resource/MonsterData.gd" id="1_chs7b"]
 [ext_resource type="Texture2D" uid="uid://cmhjnoffbxag0" path="res://hm_sprites/stone_dungeon_bg.png" id="1_ewfin"]
 [ext_resource type="Resource" uid="uid://c33qfa0qmp5l7" path="res://resources/test_level/t_monster1.tres" id="2_mytgk"]
 [ext_resource type="Texture2D" uid="uid://ctxvmbc430sp0" path="res://sprite/icon.svg" id="2_q5shi"]
 [ext_resource type="Resource" uid="uid://b1fx37ow7dv74" path="res://resources/test_level/t_monster2.tres" id="3_sqb0l"]
-[ext_resource type="Script" path="res://scripts/DungeonData.gd" id="5_aadsn"]
+[ext_resource type="Script" path="res://scripts/_Global/resource/DungeonData.gd" id="5_aadsn"]
 
 [resource]
 script = ExtResource("5_aadsn")
